@@ -90,6 +90,7 @@
     clipman
     pcmanfm
     imv
+    dolphin
 
     # GUI
     firefox
