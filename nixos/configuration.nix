@@ -94,6 +94,7 @@
 
     # GUI
     firefox
+    chromium
     vesktop
     spotify
     steam
