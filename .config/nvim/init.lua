@@ -10,9 +10,8 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.autoindent = true
-vim.opt.cc = "80"
+vim.opt.colorcolumn = {"80", "120"}
 vim.opt.cursorline = true
-vim.opt.showmatch = true
 
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
