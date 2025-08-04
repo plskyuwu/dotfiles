@@ -1,0 +1,18 @@
+alias ls='exa -a'
+alias ll='exa -la'
+
+alias cat=bat
+
+alias grep='grep --color=auto'
+
+alias open=xdg-open
+
+alias update='paru -Syyu --noconfirm && flatpak upgrade -y'
+alias update-shutdown='update && shutdown now'
+alias update-reboot='update && reboot'
+
+alias upgrade=update
+alias upgrade-shutdown=update-shutdown
+alias upgrade-shutdown=update-reboot
+
+alias vencordinstaller='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
