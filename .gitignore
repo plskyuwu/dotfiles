@@ -1,3 +1,5 @@
 # macOS DS Store files
 .DS_Store
 ._*
+
+lazy-lock.json
