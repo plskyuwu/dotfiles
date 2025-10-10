@@ -8,8 +8,8 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/submap",
         "hyprland/scratchpad",
+        "hyprland/submap",
         "custom/media"
     ],
     "modules-center": [
@@ -17,40 +17,26 @@
     ],
     "modules-right": [
         "tray",
-        "mpd",
-        "idle_inhibitor",
+        //"idle_inhibitor",
+        "wireplumber#microphone",
         "wireplumber",
         //"pulseaudio",
-        "network",
-        "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
-        "backlight",
-        "keyboard-state",
-        "sway/language",
-        "battery",
-        "battery#bat2",
+        //"network",
+        //"power-profiles-daemon",
+        //"backlight",
+        //"keyboard-state",
+        //"battery",
+        "clock#date",
         "clock",
         "custom/power"
     ],
     // Modules configuration
-    // "hyprland/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "DP-1": [1, 2, 3, 4, 5],
+            "DVI-D-1": [6, 7, 8, 9, 10]
+        }
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -69,6 +55,15 @@
         "format-icons": ["", ""],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
+    },
+    "hyprland/window": {
+        "format": "{class}",
+        "format-alt": "{title}",
+        "max-length": 55,
+        "rewrite": {
+            "(.*) — Zen Browser": "$1"
+        },
+        "separate-outputs": true
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -97,14 +92,14 @@
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
     "idle_inhibitor": {
-        "format": "{icon}",
+        "format": "{icon} ",
         "format-icons": {
             "activated": "",
             "deactivated": ""
         }
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 21,
         "spacing": 10,
         // "icons": {
         //   "blueman": "bluetooth",
@@ -112,29 +107,17 @@
         // }
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<big>{:%d.%m.%Y}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%H:%M:%S}",
-        "format-alt": "{:%m.%d.%Y}",
-        "interval" : 1
+        "interval": 1
     },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+    "clock#date": {
+        "tooltip-format": "<big>{:%d.%m.%Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%d.%m.%Y}",
+        "interval": 60
     },
     "backlight": {
-        // "device": "acpi_video1",
+        "device": "DP-1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
@@ -176,28 +159,20 @@
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+    "wireplumber": {
+        "format": "{icon}  {volume} %",
+        "format-muted": "  {volume} %",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
-    },
-    "wireplumber": {
         "on-click": "pavucontrol",
         "on-click-right": "helvum"
+    },
+    "wireplumber#microphone": {
+        "node-type": "Audio/Source",
+        "format": "",
+        "format-source-muted": "",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
     },
     "custom/media": {
         "format": "{icon} {text}",

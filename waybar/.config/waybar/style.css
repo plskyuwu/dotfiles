@@ -1,7 +1,6 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrainsMono Nerd Font Mono, sans-serif;
-    font-size: 13px;
+    font-family: JetBrainsMono Nerd Font, sans-serif;
+    font-size: 13pt;
     font-weight: bold;
 }
 
@@ -94,6 +93,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+#custom-date,
 #mpd {
     padding: 0 10px;
     color: #ffffff;
@@ -114,7 +114,8 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
+#clock,
+#custom-date {
     background-color: #64727D;
 }
 
