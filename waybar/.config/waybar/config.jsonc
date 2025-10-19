@@ -57,8 +57,8 @@
         "tooltip-format": "{app}: {title}"
     },
     "hyprland/window": {
-        "format": "{class}",
-        "format-alt": "{title}",
+        "format": "{title}",
+        "format-alt": "{class}",
         "max-length": 55,
         "rewrite": {
             "(.*) — Zen Browser": "$1"
@@ -172,7 +172,7 @@
         "node-type": "Audio/Source",
         "format": "",
         "format-source-muted": "",
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+        "on-click": "$HOME/scripts/audio/toggle-mic-with-notification"
     },
     "custom/media": {
         "format": "{icon} {text}",

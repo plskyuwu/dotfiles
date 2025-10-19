@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+
+mic_status=$(wpctl get-volume @DEFAULT_AUDIO_SOURCE@)
+
+if [[ "$mic_status" == *"[MUTED]"* ]]; then
+    notify-send "  Microphone muted"
+else
+    notify-send " Microphone unmuted"
+fi
