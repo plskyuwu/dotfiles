@@ -11,13 +11,16 @@ icon-location=right
 
 default-timeout=5000
 
-# Colors
-background-color=#285577FF
-border-color=#4C7899FF
-text-color=#FFFFFFFF
-progress-color=over #5588AAFF
-
 # Visual
 font=JetBrainsMono Nerd Font Regular 13
 
 border-radius=10
+
+# Colors
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#cba6f7
+progress-color=over #313244
+
+[urgency=high]
+border-color=#fab387
