@@ -171,7 +171,7 @@
     "wireplumber#microphone": {
         "node-type": "Audio/Source",
         "format": "",
-        "format-source-muted": "",
+        "format-muted": " ",
         "on-click": "$HOME/scripts/audio/toggle-mic-with-notification"
     },
     "custom/media": {
