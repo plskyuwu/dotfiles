@@ -16,3 +16,5 @@ alias upgrade-shutdown=update-shutdown
 alias upgrade-shutdown=update-reboot
 
 alias vencordinstaller='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
+
+alias spotify-player=spotify_player
