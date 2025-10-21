@@ -1,10 +1,12 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "layer": "top",
+    "position": "top",
+    "height": 20,
+    "spacing": 10,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-top": 10,
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
@@ -166,13 +168,14 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol",
-        "on-click-right": "helvum"
+        "on-click-right": "helvum",
+        "on-click-middle": "$HOME/scripts/audio/toggle-sound-with-notification"
     },
     "wireplumber#microphone": {
         "node-type": "Audio/Source",
         "format": "",
         "format-muted": " ",
-        "on-click": "$HOME/scripts/audio/toggle-mic-with-notification"
+        "on-click-middle": "$HOME/scripts/audio/toggle-mic-with-notification"
     },
     "custom/media": {
         "format": "{icon} {text}",
@@ -187,7 +190,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : "⏻",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
