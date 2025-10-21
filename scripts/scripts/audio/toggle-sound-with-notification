@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+if [[ "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" == *"[MUTED]"* ]]; then
+    notify-send "  Sound muted"
+else
+    notify-send "  Sound unmuted"
+fi
