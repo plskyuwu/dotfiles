@@ -1,3 +1,6 @@
+alias q=exit
+alias :q=exit
+
 alias ls='exa -a'
 alias ll='exa -la'
 
