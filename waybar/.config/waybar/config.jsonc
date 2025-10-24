@@ -1,6 +1,6 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "top",
+    //"layer": "top",
     "position": "top",
     "height": 20,
     "spacing": 10,
@@ -191,14 +191,6 @@
     },
     "custom/power": {
         "format" : "⏻",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+        "on-click": "wlogout"
     }
 }
