@@ -9,6 +9,7 @@ alias cat=bat
 alias grep='grep --color=auto'
 
 alias open=xdg-open
+alias zed=zeditor
 
 alias update='paru -Syyu --noconfirm && flatpak upgrade -y'
 alias update-shutdown='update && shutdown now'
