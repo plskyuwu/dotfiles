@@ -14,5 +14,3 @@ PS1='[\u@\h \W]\$ '
 export PATH="$PATH:$HOME/Scripts"
 
 eval "$(zoxide init --cmd cd bash)"
-
-fastfetch
