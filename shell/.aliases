@@ -7,6 +7,7 @@ alias ll='exa -la'
 alias cat=bat
 
 alias grep='grep --color=auto'
+alias less='less --color=auto'
 
 alias open=xdg-open
 alias zed=zeditor
@@ -22,3 +23,11 @@ alias upgrade-shutdown=update-reboot
 alias vencordinstaller='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
 
 alias spotify-player=spotify_player
+
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp"
+    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+    rm -f -- "$tmp"
+}
