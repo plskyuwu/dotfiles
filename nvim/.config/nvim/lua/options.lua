@@ -14,6 +14,7 @@ vim.opt.colorcolumn = {"80", "100", "120"}
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.confirm = true
+vim.opt.signcolumn = "yes"
 
 
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -27,7 +28,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣', lead = '·' }
 
-vim.opt.mouse = "a"
+vim.opt.mouse = ""
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.termguicolors = true
