@@ -1,13 +1,12 @@
 alias q=exit
 alias :q=exit
 
-alias ls='exa -a'
-alias ll='exa -la'
+alias ls='eza -a'
+alias ll='eza -la'
 
 alias cat=bat
 
 alias grep='grep --color=auto'
-alias less='less --color=auto'
 
 alias open=xdg-open
 alias zed=zeditor
