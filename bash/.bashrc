@@ -30,11 +30,14 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
+# Source rust cargo
+if [ -f "$HOME/.cargo/env" ]; then
+    . "$HOME/.cargo/env"
+fi
+
 #PS1='[\u@\h \W]\$ '
 
 export PATH="$PATH:$HOME/Scripts"
 
 eval "$(zoxide init --cmd cd bash)"
 
-# Source rust cargo
-. "$HOME/.cargo/env"
