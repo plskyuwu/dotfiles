@@ -8,6 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "disable_ai": true,
+  "format_on_save": "on",
   "icon_theme": "Catppuccin Mocha",
   "minimap": {
     "show": "auto"
