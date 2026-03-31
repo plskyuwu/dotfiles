@@ -11,6 +11,8 @@ alias grep='grep --color=auto'
 alias open=xdg-open
 alias zed=zeditor
 
+alias yt-dlp-mp4='yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]"'
+
 alias update='paru -Syyu --noconfirm && flatpak upgrade -y'
 alias update-shutdown='update && shutdown now'
 alias update-reboot='update && reboot'
