@@ -20,6 +20,10 @@ set clipboard^=ideaput
 set number
 set relativenumber
 
+" Disable audible bell
+set visualbell
+set noerrorbells
+
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
