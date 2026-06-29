@@ -24,6 +24,9 @@ set relativenumber
 set visualbell
 set noerrorbells
 
+" Better join
+set ideajoin
+
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
